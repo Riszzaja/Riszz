@@ -1,0 +1,145 @@
+    <!DOCTYPE html>  
+    <html lang="en">  
+    <head>  
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Website Kami</title>  
+        <link rel="stylesheet" href="Tugas3.css">  
+        <script src="Tugas3.js"></script> { 
+        } 
+    
+        
+    </head>  
+    <body >  
+        <header>  
+            <nav>  
+                <div class="logo">LayananKami</div>  
+                <ul>  
+                    <li><a href="#kontak">Kontak</a></li>  
+                    <li><a href="#fitur">Fitur</a></li>  
+                    <li><a href="#cara">Cara Kerja</a></li>  
+                    <li><a href="#testimonil">Testimoni</a></li>  
+                    <li><a href="#galari">Galeri</a></li>  
+                    <li><a href="tugas3(clone).html" class="button">Halaman 2</a></li>  
+                </ul>  
+            </nav>  
+            <div class="welcome-section">  
+                <h1>Selamat datang di <span>Layanan Kami</span></h1>  
+                <p>Menyediakan solusi terbaik untuk kebutuhan bisnis Anda.</p>  
+                <a href="#contactForm" class="cta-button" >Hubungi Kami</a>  
+            </div>  
+        </header>  
+        
+        <div class="contact-section">  
+            <h2 id="kontak">Kontak Kami</h2>  
+            <form id="contactForm">  
+                <label for="name">Nama</label>  
+                <input type="text" id="name" name="name" required>  
+        
+                <label for="email">Email</label>  
+                <input type="email" id="email" name="email" required>  
+        
+                <label for="status">Status</label>  
+                <select id="status" name="status">  
+                    <option value="Aktif">Aktif</option>  
+                    <option value="Tidak Aktif">Tidak Aktif</option>  
+                    <option value="Menunggu">Menunggu</option>  
+                </select>  
+        
+                <button type="button" onclick="addToTable()">Tambah ke Tabel</button>  
+            </form>  
+            
+            <h2>Tabel Data</h2>  
+            <table id="dataTable">  
+                <thead>  
+                    <tr>  
+                        <th>ID</th>  
+                        <th>Nama</th>  
+                        <th>Email</th>  
+                        <th>Status</th>  
+                    </tr>  
+                </thead>  
+                <tbody>  
+                    
+                </tbody>  
+            </table>  
+        </div>  
+        
+        
+        <script>  
+            let idCounter = 1;  
+        
+            function addToTable() {  
+                const name = document.getElementById("name").value;  
+                const email = document.getElementById("email").value;  
+                const status = document.getElementById("status").value;  
+        
+                if (name && email) {  
+                    const table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];  
+                    const newRow = table.insertRow();  
+        
+                    newRow.innerHTML = `  
+                        <td>${idCounter++}</td>  
+                        <td>${name}</td>  
+                        <td>${email}</td>  
+                        <td>${status}</td>  
+                ` ; 
+    
+                    // Reset form  
+                    document.getElementById("contactForm").reset();  
+                }  
+                
+            }  
+        </script>  
+        
+        <div class=" Kotak">     
+            <h2 class="Judul" id="fitur">Fitur Utama Kami</h2>  
+            <ul class="parag">  
+                <li>Fitur 1: Layanan Berkualitas Tinggi</li>  
+                <li>Fitur 2: Dukungan 24/7</li>  
+                <li>Fitur 3: Solusi yang Dapat Disesuaikan</li>  
+                <li>Fitur 4: Harga Terjangkau</li>  
+            </ul>  
+            <br> 
+                <h2 class="Judul">Cara Kerja</h2>  
+            <ol class="parag" id="cara">  
+                <li>Langkah 1: Hubungi Kami</li>  
+                <li>Langkah 2: Diskusikan Kebutuhan Anda</li>  
+                <li>Langkah 3: Dapatkan Proposal</li>  
+                <li>Langkah 4: Luncurkan Proyek Anda</li>  
+            </ol>  
+            <br> 
+            <section class="Testimonils"> 
+                <h2 id="testimonil">Apa Kata Klien Kami</h2> 
+            <div class="Testimonil1" > 
+                <p><i>*Pengalaman kami dengan layanan ini sangakt luar biasa Tim sangat profesional dan dapat dianadalkan*</i></p><br> 
+                <p><i>-Alex Johson</i></p> 
+            </div> 
+            <div class="Testimonil2"> 
+                <p><i>*mereka melebihi harapan dalam hal segala hal sangat merekomendasikan layanan mereka*</i></p><br> 
+                <p><i>-Sarah Wiliams</i></p> 
+            </div> 
+            </section> 
+            <br> 
+            <br> 
+            <br> 
+            <section class="Gallarys"> 
+                <h2 id="galari">Galeri Karya Kami</h2> 
+                <div class="Gallary-images"> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg40IFA3uVtf-FltJgHluQUb5Uq5bDNIQwIQ&s" alt=""> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS53tlQtR-eHHQ9quZ9RvdDbTRYDkPbOoQR5Q&s" alt=""> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC-J6MYdAjQlkb8U9x7W7ypX2lMNZbsoO1mg&s" alt=""> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuVX9LdjCuJcxcw5mtbjvOzNTbA2wGyx1zw&s" alt=""> 
+                </div> 
+            </section> 
+        <br> 
+            <section class="akhir"> 
+                <div> 
+                    <p>&copyHalamanUtamaKami Semua hak dilindungi.</p> 
+                </div> 
+            </section> 
+        </div> 
+        
+        
+    </body>  
+    </html>
